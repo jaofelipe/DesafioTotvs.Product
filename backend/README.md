@@ -1,10 +1,6 @@
 # Descrição do Projeto
 
-Este repositório contém uma aplicação full stack desenvolvida com foco em boas práticas modernas de arquitetura utilizando:
-
 Backend em .NET 8, estruturado em DDD (Domain-Driven Design)
-
-Frontend em Angular, consumindo a API
 
 Banco de dados InMemory com Entity Framework Core
 
