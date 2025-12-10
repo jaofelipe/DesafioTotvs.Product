@@ -1,0 +1,166 @@
+/* ================================ */
+/*  VARIÁVEIS DO TEMA               */
+/* ================================ */
+
+:root {
+  /* Light mode */
+  --background: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-color: #222;
+  --text-muted: #555;
+  --border-color: #d1d5db;
+  --table-header-bg: #eef0f4;
+  --table-row-hover: #f9fafb;
+
+  /* Buttons */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+
+  /* Inputs */
+  --input-bg: #ffffff;
+  --input-border: #d1d5db;
+  --input-focus-border: #6366f1;
+  --input-focus-shadow: rgba(99,102,241,0.25);
+}
+
+/* ================================ */
+/*  DARK MODE                       */
+/* ================================ */
+
+.dark-mode {
+  --background: #0f172a;
+  --card-bg: #1e293b;
+  --text-color: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --table-header-bg: #1e293b;
+  --table-row-hover: #0f172a;
+
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+
+  --input-bg: #1e293b;
+  --input-border: #475569;
+  --input-focus-border: #818cf8;
+  --input-focus-shadow: rgba(129,140,248,0.35);
+}
+
+/* ================================ */
+/*  GLOBAL                          */
+/* ================================ */
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: 0.25s background, 0.25s color;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+  transition: 0.25s background;
+}
+
+/* ================================ */
+/*  BUTTONS                         */
+/* ================================ */
+
+button {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: var(--danger-hover);
+}
+
+/* ================================ */
+/*  INPUTS (caixas de texto)        */
+/* ================================ */
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s border, 0.2s box-shadow, 0.2s background;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 2px var(--input-focus-shadow);
+}
+
+/* ================================ */
+/*  TABLE                           */
+/* ================================ */
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 10px;
+}
+
+thead {
+  background: var(--table-header-bg);
+}
+
+th, td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:hover {
+  background: var(--table-row-hover);
+}
+
+/* ================================ */
+/*  TEXT & MESSAGES                 */
+/* ================================ */
+
+.error {
+  color: var(--danger);
+}
+
+.empty-message {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 20px;
+}

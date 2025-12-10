@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Cadastro de Produtos</h1>
+
+  <button (click)="onCreate()">Cadastrar Produto</button>
+
+  <div *ngIf="isLoading">
+    Carregando produtos...
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <table *ngIf="!isLoading && products.length > 0">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço (R$)</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency:'BRL':'symbol' }}</td>
+        <td>
+          <button (click)="onEdit(product)">Editar</button>
+          <button (click)="onDelete(product)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!isLoading && products.length === 0" class="empty-message">
+    Nenhum produto encontrado.
+  </div>
+</div>

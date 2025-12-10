@@ -1,0 +1,27 @@
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 6px;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  margin-right: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
