@@ -10,4 +10,4 @@ Banco de dados InMemory com Entity Framework Core
 
 Aplicação dos princípios de Clean Architecture e SOLID
 
-Backend: https://github.com/jaofelipe/DesafioTotvs.Product/edit/master/backend/README.md
+Backend: https://github.com/jaofelipe/DesafioTotvs.Product/blob/master/backend/README.md
