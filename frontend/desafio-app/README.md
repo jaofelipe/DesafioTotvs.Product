@@ -27,7 +27,6 @@ src/
   main.ts                → bootstrapApplication + providers
   environments/
     environment.ts
-    environment.prod.ts
 
   app/
     app.component.ts     → componente raiz standalone
