@@ -21,11 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mock\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DesafioTotvs.Application\DesafioTotvs.Application.csproj" />
     <ProjectReference Include="..\DesafioTotvs.Domain\DesafioTotvs.Domain.csproj" />
     <ProjectReference Include="..\DesafioTotvs.Infra\DesafioTotvs.Infra.csproj" />
