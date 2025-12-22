@@ -1,153 +1,59 @@
-# Descrição do Projeto
+# DesafioApp
 
-Este é o frontend do desafio técnico de cadastro de produtos, desenvolvido em Angular 19 Standalone, utilizando:
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
 
-✔ Standalone Components (sem módulos)
+## Development server
 
-✔ Lazy loading com rotas standalone
+To start a local development server, run:
 
-✔ Arquitetura limpa organizada
-
-✔ HttpClient com injeção automática via providers
-
-✔ Formulários reativos (Reactive Forms)
-
-✔ Tema claro + tema escuro (Dark Mode)
-
-✔ Design system em CSS com variáveis
-
-✔ Layout moderno e responsivo
-
-A aplicação se comunica com a API .NET 8 (DDD + Clean Architecture) para realizar operações CRUD de produtos.
-
-## Arquitetura do Projeto
-
-```bash
-src/
-  main.ts                → bootstrapApplication + providers
-  environments/
-    environment.ts
-
-  app/
-    app.component.ts     → componente raiz standalone
-    app.component.html
-    app.routes.ts        → rotas principais
-
-    models/
-        product.model.ts
-    services/
-        product.service.ts
-
-    components/products/
-      products.routes.ts
-      list/
-        product-list.component.ts
-        product-list.component.html
-      form/
-        product-form.component.ts
-        product-form.component.html
-
-styles.css               → design system + tema escuro
-```
-
-## Padrões e boas práticas aplicadas
-
-✔ Componentes 100% standalone
-
-✔ Uso de DI via provideHttpClient()
-
-✔ Lazy loading sem NgModules
-
-✔ CSS global com variáveis de tema
-
-✔ Responsividade e foco em UX
-
-## Tema Claro + Tema Escuro
-
-Toda a aplicação usa um design system baseado em variáveis CSS:
-
-```
-:root → tema claro
-.dark-mode → tema escuro
-```
-
-O botão de alternância entre os temas está no AppComponent:
-
-```bash
-toggleTheme() {
-  document.body.classList.toggle('dark-mode');
-}
-```
-
-## Requisitos
-
-Node.js 18 ou superior
-
-Angular CLI 17+
-
-Backend em execução (API .NET 8):
-
-HTTP: ``` http://localhost:5000 ```
-
-ou HTTPS: ``` https://localhost:5001 ```
-
-Configuração do ambiente (arquivo environment.ts):
-```
-export const environment = {
-  production: false,
-  apiUrl: 'http://localhost:5000/api'
-};
-```
-
-▶️ Como executar o projeto
-1️⃣ Instale as dependências
-```bash
-npm install
-```
-2️⃣ Inicie o servidor de desenvolvimento
 ```bash
 ng serve
 ```
 
-O frontend estará disponível em:
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
 ```bash
-http://localhost:4200
+ng generate component component-name
 ```
 
-🏗️ Build para produção
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
 ```bash
 ng build
 ```
 
-Os artefatos de produção irão para:
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
 ```bash
-dist/desafio-app/
+ng test
 ```
 
-## Funcionalidades
+## Running end-to-end tests
 
-✔ Listar produtos com tabela responsiva
+For end-to-end (e2e) testing, run:
 
-✔ Criar novo produto
+```bash
+ng e2e
+```
 
-✔ Editar produto
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-✔ Excluir produto com confirmação
+## Additional Resources
 
-✔ Campos validados com Reactive Forms
-
-✔ Mensagens amigáveis de erro
-
-✔ Formatação brasileira de moeda
-
-## Diferenciais Técnicos
-
-✔ Arquitetura standalone moderna
-
-✔ Lazy loading real sem NgModules
-
-✔ Design system com tema escuro/claro
-
-✔ Componentes desacoplados
-
-✔ Frontend alinhado às novas recomendações do Angular (2024–2025)
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
